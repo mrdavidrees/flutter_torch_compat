@@ -19,16 +19,18 @@ class _MyAppState extends State<MyApp> {
         body: Center(
           child: Column(
             children: <Widget>[
-              RaisedButton(
-                  child: Text('Turn on'),
-                  onPressed: () {
-                    TorchCompat.turnOn();
-                  }),
-              RaisedButton(
-                  child: Text('Turn off'),
-                  onPressed: () {
-                    TorchCompat.turnOff();
-                  })
+              ElevatedButton(
+                onPressed: () {
+                  TorchCompat.turnOn();
+                },
+                child: Text('Turn on'),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  TorchCompat.turnOff();
+                },
+                child: Text('Turn off'),
+              )
             ],
           ),
         ),

@@ -1,6 +1,5 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:torch_compat/torch_compat.dart';
 
 void main() {
   const MethodChannel channel = MethodChannel('torch_compat');
@@ -15,7 +14,7 @@ void main() {
     channel.setMockMethodCallHandler(null);
   });
 
-  test('getPlatformVersion', () async {
-    expect(await TorchCompat.platformVersion, '42');
-  });
+  // test('getPlatformVersion', () async {
+  //   expect(await TorchCompat.platformVersion, '42');
+  // });
 }
